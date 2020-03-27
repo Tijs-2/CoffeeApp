@@ -84,6 +84,9 @@
                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                   <mainClass>coffee.app.main.CoffeeApp</mainClass>
                 </transformer>
+                <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                  <resource>META-INF/services/io.dinject.core.BeanContextFactory</resource>
+                </transformer>
               </transformers>
               <finalName>Service</finalName>
             </configuration>
